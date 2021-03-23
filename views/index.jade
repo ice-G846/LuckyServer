@@ -1,0 +1,16 @@
+doctype html
+html(lang='en')
+  head
+    title #{title}
+  body
+    div
+      table(border=1)
+        tr 
+          th id
+          th 用户名
+          th 密码
+        for user in users
+          tr 
+            td #{user.id}
+            td #{user.name}
+            td #{user.password}

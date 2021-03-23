@@ -1,0 +1,20 @@
+exports.webapp_msg = {
+	"1":{
+	    id:1,
+	    name:"庞金民",
+	    telephone:"136****5789",
+			theWin:"恭喜你！获得了50元话费！"
+	},
+	"2":{
+	    id:2,
+	    name:"陈泳彬",
+	    telephone:"136****5789",
+	    theWin:"恭喜你！获得了50元话费！"
+	},
+	"3":{
+	    id:3,
+	    name:"陈滓轩",
+	    telephone:"136****5789",
+	    theWin:"恭喜你！获得了50元话费！"
+	}
+}

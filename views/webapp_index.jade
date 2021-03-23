@@ -1,0 +1,73 @@
+doctype html
+html(lang='en')
+	head
+		title #{title}
+	style.
+		div{
+			width:600px;
+			margin:0 auto;
+			margin-top:40px;
+		}
+		table {
+		    border: 1 px solid #e9e9e9;
+		    border-collapse: collapse;
+		    border-spacing: 0px;
+		}
+		th,td{
+		    padding: 8px 16px;
+		    border: 1px solid #e9e9e9;
+		    text-align: left;
+		}
+		
+		th{
+		    background-color: #f7f7f7;
+		    color: #5c6b77;
+		    font-weight: 600;
+		}
+		input{
+				margin-top:30px;
+				height:30px;
+		}
+		button{
+				margin-left:5px;
+				border-radius:3px;
+				height:36px;
+				border:1px solid #5a5a5a;
+		}
+		h1{
+			display:inline-block;
+			width:496px;
+			text-align:center;
+		}
+		span{
+			font-size:18px;
+		}
+		.tab-title{
+			background-color:#bbbbbb;
+			text-align:center;
+			color:white;
+		}
+	body
+		div
+			h1 后台管理
+			table(border=1)
+				tr
+					th(class="tab-title" colspan='4') 中奖名单
+				tr 
+					th 姓名
+					th 电话
+					th 奖品
+				for msg in webapp_msg
+					tr 
+						td #{msg.name}
+						td #{msg.telephone}
+						td #{msg.theWin}
+		div
+			span 中奖概率 
+			span#aaa #{webapp_chance}
+			span %
+			br
+			form(action='webapp/msg/addChance',method='post')
+				span 修改中奖率：
+				input(type='text', name="change", placeholder='0-100',id="bar" value="")
+				button(type='submit') 修改
